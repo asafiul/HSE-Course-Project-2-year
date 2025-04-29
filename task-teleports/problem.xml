@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="91" short-name="teleports" url="https://polygon.codeforces.com/p8yDuRx/asafiul/teleports">
+    <names>
+        <name language="russian" value="Гонка дронов"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="russian" mathjax="true" path="statements/russian/problem.tex" type="application/x-tex"/>
+        <statement language="russian" path="statements/.pdf/russian/problem.pdf" type="application/pdf"/>
+    </statements>
+    <tutorials>
+        <tutorial charset="UTF-8" language="russian" mathjax="true" path="statements/russian/tutorial.tex" type="application/x-tex"/>
+        <tutorial language="russian" path="statements/.pdf/russian/tutorial.pdf" type="application/pdf"/>
+    </tutorials>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>2000</time-limit>
+            <memory-limit>536870912</memory-limit>
+            <test-count>220</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test group="0" method="manual" points="0.0" sample="true"/>
+                <test group="0" method="manual" points="0.0" sample="true"/>
+                <test group="0" method="manual" points="0.0" sample="true"/>
+                <test cmd="gen n=2 m=50 vmode=4 smode=2 vr=100000 maxs=100000" group="1" method="generated" points="5.0"/>
+                <test cmd="gen2 -n 2 -maxm 50 -vmode 7 -smode 0 -s1 1" group="1" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 2 -maxm 50 -vmode 1 -smode 4" group="1" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 2 -maxm 50 -vmode 3 -smode 4" group="1" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 2 -maxm 50 -vmode 4 -smode 4" group="1" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 2 -maxm 50 -vmode 7 -smode 4" group="1" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 2 -maxm 50 -vmode 1 -smode 5" group="1" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 2 -maxm 50 -vmode 3 -smode 5" group="1" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 2 -maxm 50 -vmode 4 -smode 5" group="1" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 2 -maxm 50 -vmode 1 -smode 5 -dec" group="1" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 2 -maxm 50 -vmode 7 -smode 5 -dec" group="1" method="generated" points="0.0"/>
+                <test cmd="gen n=50 m=50 vmode=4 smode=2 vr=100000 maxs=100000" group="2" method="generated" points="7.0"/>
+                <test cmd="gen2 -n 50 -maxm 50 -vmode 1 -smode 4" group="2" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50 -maxm 50 -vmode 3 -smode 4" group="2" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50 -maxm 50 -vmode 4 -smode 4" group="2" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50 -maxm 50 -vmode 5 -smode 4" group="2" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50 -maxm 50 -vmode 7 -smode 4" group="2" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50 -maxm 50 -vmode 1 -smode 5" group="2" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50 -maxm 50 -vmode 3 -smode 5" group="2" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50 -maxm 50 -vmode 4 -smode 5" group="2" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50 -maxm 50 -vmode 5 -smode 5" group="2" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50 -maxm 50 -vmode 1 -smode 5 -dec" group="2" method="generated" points="0.0"/>
+                <test cmd="gen n=1000 m=5 vmode=4 smode=2 vr=100000 maxs=100000" group="3" method="generated" points="13.0"/>
+                <test cmd="gen2 -n 1000 -maxm 5 -vmode 7 -smode 0 -s1 1" group="3" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 1000 -maxm 5 -vmode 1 -smode 4" group="3" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 1000 -maxm 5 -vmode 3 -smode 4" group="3" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 1000 -maxm 5 -vmode 4 -smode 4" group="3" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 1000 -maxm 5 -vmode 5 -smode 4" group="3" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 1000 -maxm 5 -vmode 7 -smode 4" group="3" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 1000 -maxm 5 -vmode 1 -smode 5" group="3" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 1000 -maxm 5 -vmode 3 -smode 5" group="3" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 1000 -maxm 5 -vmode 4 -smode 5" group="3" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 1000 -maxm 5 -vmode 5 -smode 5" group="3" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 1000 -maxm 5 -vmode 1 -smode 5 -dec" group="3" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 1000 -maxm 5 -vmode 7 -smode 5 -dec" group="3" method="generated" points="0.0"/>
+                <test cmd="gen n=100000 vmode=4 smode=1 s1=1 vr=100000 maxs=100000" group="4" method="generated" points="9.0"/>
+                <test cmd="gen n=100000 vmode=4 smode=1 s1=10 vr=100000 maxs=100000" group="4" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 1 -smode 0 -s1 1" group="4" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 2 -smode 0 -s1 1" group="4" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 3 -smode 0 -s1 1" group="4" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 4 -smode 0 -s1 1" group="4" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 5 -smode 0 -s1 1" group="4" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 6 -smode 0 -s1 1" group="4" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 7 -smode 0 -s1 1" group="4" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 1 -smode 0 -s1 11" group="4" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 1 -smode 0 -s1 239" group="4" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 1 -smode 0 -s1 3333" group="4" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 1 -smode 0 -s1 100000" group="4" method="generated" points="0.0"/>
+                <test cmd="gen n=100000 vmode=1 vi=100000 smode=2 vr=100000 maxs=100000" group="5" method="generated" points="8.0"/>
+                <test cmd="gen2 -n 100000 -vmode 7 -smode 0 -s1 1 xxx" group="5" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 7 -smode 1" group="5" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 7 -smode 2" group="5" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 7 -smode 3" group="5" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 7 -smode 3 xxx" group="5" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 7 -smode 4 -cnt 20000" group="5" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 7 -smode 4 -cnt 10000" group="5" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 7 -smode 4 -cnt 100" group="5" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 7 -smode 6" group="5" method="generated" points="0.0"/>
+                <test cmd="gen n=100 vmode=4 smode=2 vr=100000 maxs=100000" group="6" method="generated" points="10.0"/>
+                <test cmd="gen2 -n 100 -vmode 1 -smode 0 -s1 1" group="6" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100 -vmode 1 -smode 1" group="6" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100 -vmode 1 -smode 2" group="6" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100 -vmode 1 -smode 3" group="6" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100 -vmode 1 -smode 4 -cnt 50000" group="6" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100 -vmode 1 -smode 4 -cnt 25000" group="6" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100 -vmode 1 -smode 6" group="6" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100 -vmode 2 -smode 1" group="6" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100 -vmode 2 -smode 2" group="6" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100 -vmode 2 -smode 3" group="6" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100 -vmode 2 -smode 4 -cnt 25000" group="6" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100 -vmode 2 -smode 6" group="6" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100 -vmode 3 -smode 3" group="6" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100 -vmode 4 -smode 3" group="6" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100 -vmode 5 -smode 3" group="6" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100 -vmode 6 -smode 3" group="6" method="generated" points="0.0"/>
+                <test cmd="gen n=100000 vmode=4 smode=2 vr=2 maxs=100000" group="7" method="generated" points="5.0"/>
+                <test cmd="gen2 -n 100000 -maxt 2 -vmode 1 -smode 0 -s1 1" group="7" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxt 2 -vmode 1 -smode 1" group="7" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxt 2 -vmode 1 -smode 2" group="7" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxt 2 -vmode 1 -smode 3" group="7" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxt 2 -vmode 1 -smode 4 -cnt 50000" group="7" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxt 2 -vmode 1 -smode 4 -cnt 25000" group="7" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxt 2 -vmode 1 -smode 6" group="7" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxt 2 -vmode 3 -smode 3" group="7" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxt 2 -vmode 4 -smode 3" group="7" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxt 2 -vmode 7 -smode 3" group="7" method="generated" points="0.0"/>
+                <test cmd="gen n=100000 vmode=4 smode=6 inc=0 vr=100000 maxs=10000" group="8" method="generated" points="7.0"/>
+                <test cmd="gen n=100000 vmode=4 smode=6 inc=1 vr=100000 maxs=10000" group="8" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxm 2 -vmode 1 -smode 0 -s1 1" group="8" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxm 2 -vmode 1 -smode 0 -s1 50000" group="8" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxm 2 -vmode 1 -smode 4" group="8" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxm 2 -vmode 1 -smode 5" group="8" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxm 2 -vmode 1 -smode 7" group="8" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxm 2 -vmode 2 -smode 4" group="8" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxm 2 -vmode 3 -smode 5" group="8" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxm 2 -vmode 3 -smode 5 -dec" group="8" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxm 2 -vmode 4 -smode 5" group="8" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxm 2 -vmode 4 -smode 5 -dec" group="8" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxm 2 -vmode 6 -smode 5" group="8" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxm 2 -vmode 6 -smode 5 -dec" group="8" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -maxm 2 -vmode 7 -smode 4" group="8" method="generated" points="0.0"/>
+                <test cmd="gen n=10000 m=100000 vmode=4 smode=2 vr=100000 maxs=100000" group="9" method="generated" points="6.0"/>
+                <test cmd="gen2 -n 10000 -vmode 1 -smode 1" group="9" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 10000 -vmode 1 -smode 2" group="9" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 10000 -vmode 1 -smode 3" group="9" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 10000 -vmode 1 -smode 6" group="9" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 10000 -vmode 1 -smode 4 -cnt 25000" group="9" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 10000 -vmode 2 -smode 1" group="9" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 10000 -vmode 2 -smode 2" group="9" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 10000 -vmode 2 -smode 3" group="9" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 10000 -vmode 2 -smode 6" group="9" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 10000 -vmode 2 -smode 4 -cnt 50000" group="9" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 10000 -vmode 3 -smode 1" group="9" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 10000 -vmode 4 -smode 2" group="9" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 10000 -vmode 3 -smode 3" group="9" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 10000 -vmode 4 -smode 6" group="9" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 10000 -vmode 3 -smode 4 -cnt 10000" group="9" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 10000 -vmode 6 -smode 1" group="9" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 10000 -vmode 6 -smode 2" group="9" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 10000 -vmode 6 -smode 3" group="9" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 10000 -vmode 6 -smode 6" group="9" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 10000 -vmode 6 -smode 4 -cnt 33333" group="9" method="generated" points="0.0"/>
+                <test cmd="gen n=50000 m=100000 vmode=4 smode=2 vr=100000 maxs=100000" group="10" method="generated" points="6.0"/>
+                <test cmd="gen2 -n 50000 -vmode 1 -smode 1" group="10" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50000 -vmode 1 -smode 2" group="10" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50000 -vmode 1 -smode 3" group="10" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50000 -vmode 1 -smode 6" group="10" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50000 -vmode 1 -smode 4 -cnt 25000" group="10" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50000 -vmode 2 -smode 1" group="10" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50000 -vmode 2 -smode 2" group="10" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50000 -vmode 2 -smode 3" group="10" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50000 -vmode 2 -smode 6" group="10" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50000 -vmode 2 -smode 4 -cnt 50000" group="10" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50000 -vmode 3 -smode 1" group="10" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50000 -vmode 4 -smode 2" group="10" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50000 -vmode 3 -smode 3" group="10" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50000 -vmode 4 -smode 6" group="10" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50000 -vmode 3 -smode 4 -cnt 10000" group="10" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50000 -vmode 6 -smode 1" group="10" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50000 -vmode 6 -smode 2" group="10" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50000 -vmode 6 -smode 3" group="10" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50000 -vmode 6 -smode 6" group="10" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 50000 -vmode 6 -smode 4 -cnt 33333" group="10" method="generated" points="0.0"/>
+                <test cmd="gen n=100000 m=100000 vmode=4 smode=2 vr=100000 maxs=100000" group="11" method="generated" points="8.0"/>
+                <test cmd="gen2 -n 100000 -vmode 1 -smode 1" group="11" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 1 -smode 2" group="11" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 1 -smode 3" group="11" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 1 -smode 6" group="11" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 1 -smode 4 -cnt 25000" group="11" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 2 -smode 1" group="11" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 2 -smode 2" group="11" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 2 -smode 3" group="11" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 2 -smode 6" group="11" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 2 -smode 4 -cnt 50000" group="11" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 3 -smode 1" group="11" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 4 -smode 2" group="11" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 3 -smode 3" group="11" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 4 -smode 6" group="11" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 3 -smode 4 -cnt 10000" group="11" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 6 -smode 1" group="11" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 6 -smode 2" group="11" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 6 -smode 3" group="11" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 6 -smode 6" group="11" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 6 -smode 4 -cnt 33333" group="11" method="generated" points="0.0"/>
+                <test cmd="gen n=100000 m=100000 vmode=4 smode=2" group="12" method="generated" points="8.0"/>
+                <test cmd="gen2 -n 100000 -vmode 1 -smode 0 -s1 1 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 1 -smode 1 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 1 -smode 2 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 1 -smode 3 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 1 -smode 6 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 1 -smode 4 -cnt 25000 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 2 -smode 1 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 2 -smode 2 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 2 -smode 3 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 2 -smode 6 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 2 -smode 4 -cnt 50000 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 3 -smode 1 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 4 -smode 2 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 3 -smode 3 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 4 -smode 6 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 3 -smode 4 -cnt 10000 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 5 -smode 1 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 5 -smode 1 xxx -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 5 -smode 2 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 5 -smode 3 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 5 -smode 6 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 6 -smode 1 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 6 -smode 2 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 6 -smode 3 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 6 -smode 6 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 100000 -vmode 6 -smode 4 -cnt 33333 -f" group="12" method="generated" points="0.0"/>
+                <test cmd="gen vmode=4 smode=2" group="13" method="generated" points="8.0"/>
+                <test cmd="gen2 -n 150000 -vmode 1 -smode 1 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 1 -smode 2 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 1 -smode 3 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 1 -smode 6 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 1 -smode 4 -cnt 25000 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 2 -smode 1 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 2 -smode 2 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 2 -smode 3 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 2 -smode 6 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 2 -smode 4 -cnt 50000 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 3 -smode 1 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 4 -smode 2 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 3 -smode 3 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 4 -smode 6 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 3 -smode 4 -cnt 10000 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 5 -smode 1 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 5 -smode 1 xxx -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 5 -smode 2 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 5 -smode 3 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 5 -smode 6 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 6 -smode 1 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 6 -smode 2 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 6 -smode 3 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 6 -smode 6 -f" group="13" method="generated" points="0.0"/>
+                <test cmd="gen2 -n 150000 -vmode 6 -smode 4 -cnt 33333 -f" group="13" method="generated" points="0.0"/>
+            </tests>
+            <groups>
+                <group feedback-policy="complete" name="0" points="0.0" points-policy="complete-group"/>
+                <group feedback-policy="icpc" name="1" points="5.0" points-policy="complete-group"/>
+                <group feedback-policy="icpc" name="2" points="7.0" points-policy="complete-group">
+                    <dependencies>
+                        <dependency group="0"/>
+                        <dependency group="1"/>
+                    </dependencies>
+                </group>
+                <group feedback-policy="icpc" name="3" points="13.0" points-policy="complete-group">
+                    <dependencies>
+                        <dependency group="0"/>
+                    </dependencies>
+                </group>
+                <group feedback-policy="icpc" name="4" points="9.0" points-policy="complete-group"/>
+                <group feedback-policy="icpc" name="5" points="8.0" points-policy="complete-group"/>
+                <group feedback-policy="icpc" name="6" points="10.0" points-policy="complete-group">
+                    <dependencies>
+                        <dependency group="0"/>
+                        <dependency group="1"/>
+                        <dependency group="2"/>
+                    </dependencies>
+                </group>
+                <group feedback-policy="icpc" name="7" points="5.0" points-policy="complete-group"/>
+                <group feedback-policy="icpc" name="8" points="7.0" points-policy="complete-group"/>
+                <group feedback-policy="icpc" name="9" points="6.0" points-policy="complete-group">
+                    <dependencies>
+                        <dependency group="0"/>
+                        <dependency group="1"/>
+                        <dependency group="2"/>
+                        <dependency group="3"/>
+                        <dependency group="6"/>
+                    </dependencies>
+                </group>
+                <group feedback-policy="icpc" name="10" points="6.0" points-policy="complete-group">
+                    <dependencies>
+                        <dependency group="0"/>
+                        <dependency group="1"/>
+                        <dependency group="2"/>
+                        <dependency group="3"/>
+                        <dependency group="6"/>
+                        <dependency group="9"/>
+                    </dependencies>
+                </group>
+                <group feedback-policy="icpc" name="11" points="8.0" points-policy="complete-group">
+                    <dependencies>
+                        <dependency group="0"/>
+                        <dependency group="1"/>
+                        <dependency group="2"/>
+                        <dependency group="3"/>
+                        <dependency group="4"/>
+                        <dependency group="5"/>
+                        <dependency group="6"/>
+                        <dependency group="7"/>
+                        <dependency group="8"/>
+                        <dependency group="9"/>
+                        <dependency group="10"/>
+                    </dependencies>
+                </group>
+                <group feedback-policy="icpc" name="12" points="8.0" points-policy="complete-group">
+                    <dependencies>
+                        <dependency group="0"/>
+                        <dependency group="1"/>
+                        <dependency group="2"/>
+                        <dependency group="3"/>
+                        <dependency group="4"/>
+                        <dependency group="5"/>
+                        <dependency group="6"/>
+                        <dependency group="7"/>
+                        <dependency group="8"/>
+                        <dependency group="9"/>
+                        <dependency group="10"/>
+                        <dependency group="11"/>
+                    </dependencies>
+                </group>
+                <group feedback-policy="icpc" name="13" points="8.0" points-policy="complete-group">
+                    <dependencies>
+                        <dependency group="0"/>
+                        <dependency group="1"/>
+                        <dependency group="2"/>
+                        <dependency group="3"/>
+                        <dependency group="4"/>
+                        <dependency group="5"/>
+                        <dependency group="6"/>
+                        <dependency group="7"/>
+                        <dependency group="8"/>
+                        <dependency group="9"/>
+                        <dependency group="10"/>
+                        <dependency group="11"/>
+                        <dependency group="12"/>
+                    </dependencies>
+                </group>
+            </groups>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+            <file path="files/tutorial.tex"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/asafiul_gen_distances_equal.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/asafiul_gen_m_equals_2.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/asafiul_gen_random.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/asafiul_gen_worst_sqrtS.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/gen.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+            </executable>
+            <executable>
+                <source path="files/gen2.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::ncmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+                <testset>
+                    <test-count>12</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/Golovanov_nsqrts_strange.cpp" type="cpp.gcc11-64-winlibs-g++20"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/Maksim1744_nn_plus_nsqrtslogn.cpp" type="cpp.gcc11-64-winlibs-g++20"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/Maksim1744_nnsqrtslogn.cpp" type="cpp.gcc11-64-winlibs-g++20"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/Maksim1744_nsqrtslogn_fast.cpp" type="cpp.gcc11-64-winlibs-g++20"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/Maksim1744_nsqrtslogn_tl.cpp" type="cpp.gcc11-64-winlibs-g++20"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/Maksim1744_ok.cpp" type="cpp.gcc11-64-winlibs-g++20"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/Ormlis_nnsqrts.cpp" type="cpp.gcc11-64-winlibs-g++20"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/Ormlis_nsqrts.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/Ormlis_nsqrtslogn.cpp" type="cpp.gcc11-64-winlibs-g++20"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/asafiul_all_distances_equal.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+                <extra-tags>
+                    <extra-tag group="1" tag="accepted"/>
+                </extra-tags>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/asafiul_mn2logn.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/asafiul_mn3.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/asafiul_n2sqrtSlogn.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/asafiul_n3sqrtS.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/asafiul_nlognsqrtS.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/asafiul_ok.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/asafiul_ok_fast.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/asafiul_vi_equal.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/asafiul_vi_not_greater_2.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/is_ok_fenwick.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/is_ok_fenwick_cut.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/is_ok_nsqrts_largev.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/is_ok_sqrt_cut.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/is_ok_sqrt_rebuild.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>1</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list>
+            <stress index="1" path="stresses/001"/>
+        </list>
+    </stresses>
+    <tags>
+        <tag value="sqrt-decomposition"/>
+    </tags>
+</problem>

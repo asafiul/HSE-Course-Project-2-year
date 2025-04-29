@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="28" short-name="tpt-25-crossword" url="https://polygon.codeforces.com/p4zbwnw/asafiul/tpt-25-crossword">
+    <names>
+        <name language="russian" value="Кроссворд"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="russian" mathjax="true" path="statements/russian/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="russian" mathjax="true" path="statements/.html/russian/problem.html" type="text/html"/>
+        <statement language="russian" path="statements/.pdf/russian/problem.pdf" type="application/pdf"/>
+    </statements>
+    <tutorials>
+        <tutorial charset="UTF-8" language="russian" mathjax="true" path="statements/russian/tutorial.tex" type="application/x-tex"/>
+        <tutorial language="russian" path="statements/.pdf/russian/tutorial.pdf" type="application/pdf"/>
+    </tutorials>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>45</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test cmd="gen -alph 1 -s1 5 -s2 3 -s3 4 -s4 2" method="generated"/>
+                <test cmd="gen -alph 1 -s1 10 -s2 9 -s3 8 -s4 7" method="generated"/>
+                <test cmd="gen -alph 1 -s1 10 -s2 9 -s3 3 -s4 2" method="generated"/>
+                <test cmd="gen -alph 2 -s1 2 -s2 2 -s3 3 -s4 3" method="generated"/>
+                <test cmd="gen -alph 2 -s1 3 -s2 2 -s3 4 -s4 2" method="generated"/>
+                <test cmd="gen -alph 2 -s1 10 -s2 10 -s3 2 -s4 2" method="generated"/>
+                <test cmd="gen -alph 2 2" method="generated"/>
+                <test cmd="gen -alph 2 3" method="generated"/>
+                <test cmd="gen -alph 3 -s1 3 -s2 3 -s3 3 -s4 3" method="generated"/>
+                <test cmd="gen -alph 3 -s1 2 -s2 2 -s3 2 -s4 10" method="generated"/>
+                <test cmd="gen -alph 3 -s1 2 -s2 10 -s3 10 -s4 2" method="generated"/>
+                <test cmd="gen -alph 3 -s1 4 -s2 4 -s3 4 -s4 4" method="generated"/>
+                <test cmd="gen -alph 3" method="generated"/>
+                <test cmd="gen -alph 4 -s1 2 -s2 2 -s3 4 -s4 6" method="generated"/>
+                <test cmd="gen -alph 4 -s1 10 -s2 2 -s3 2 -s4 10" method="generated"/>
+                <test cmd="gen -alph 4 -s1 2 -s2 10 -s3 10 -s4 10" method="generated"/>
+                <test cmd="gen -alph 4 1" method="generated"/>
+                <test cmd="gen -alph 4 2" method="generated"/>
+                <test cmd="gen -alph 5 -s1 2 -s2 2 -s3 2 -s4 10" method="generated"/>
+                <test cmd="gen -alph 6 -s1 10 -s2 10 -s3 2 -s4 2" method="generated"/>
+                <test cmd="gen -alph 7 -s1 10 -s2 3 -s3 2" method="generated"/>
+                <test cmd="gen -alph 8 -s1 10 -s2 3 -s3 10 -s4 3" method="generated"/>
+                <test cmd="gen -alph 9" method="generated"/>
+                <test cmd="gen -alph 10 -s1 4 -s2 10 -s3 10 -s4 3" method="generated"/>
+                <test cmd="gen -alph 15" method="generated"/>
+                <test cmd="gen -alph 16" method="generated"/>
+                <test cmd="gen -alph 24 -s2 8" method="generated"/>
+                <test cmd="gen -s1 5" method="generated"/>
+                <test cmd="gen 1" method="generated"/>
+                <test cmd="gen 2" method="generated"/>
+                <test cmd="gen 3" method="generated"/>
+                <test cmd="gen 4" method="generated"/>
+                <test description="проверка на границы" method="manual"/>
+                <test cmd="gen 5" method="generated"/>
+                <test cmd="gen 6" method="generated"/>
+                <test description="ответ-крест" method="manual"/>
+                <test method="manual"/>
+                <test description="квадрат" method="manual"/>
+                <test method="manual"/>
+                <test description="изи квадрат" method="manual"/>
+                <test description="изи квадрат2" method="manual"/>
+                <test cmd="gen 7" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+            <file path="files/tutorial.tex"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/checker.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </executable>
+            <executable>
+                <source path="files/gen.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </executable>
+            <executable>
+                <source path="files/val.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker type="testlib">
+            <source path="files/checker.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            <copy path="check.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            <testset>
+                <test-count>13</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests>
+                    <test verdict="ok"/>
+                    <test verdict="wrong-answer"/>
+                    <test verdict="wrong-answer"/>
+                    <test verdict="wrong-answer"/>
+                    <test verdict="wrong-answer"/>
+                    <test verdict="wrong-answer"/>
+                    <test verdict="presentation-error"/>
+                    <test verdict="wrong-answer"/>
+                    <test verdict="ok"/>
+                    <test verdict="wrong-answer"/>
+                    <test verdict="wrong-answer"/>
+                    <test verdict="presentation-error"/>
+                    <test verdict="ok"/>
+                </tests>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/val.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <testset>
+                    <test-count>6</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="valid"/>
+                        <test verdict="invalid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/allvik.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/allvik_wa.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/asafiul_ok_count_crosswords.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/asafiul_ok_n6.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/asafiul_wa.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/asafiul_wa2.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/asafiul_wa3.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/asafiul_wa4.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/asafiul_wa5.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="implementation"/>
+    </tags>
+</problem>

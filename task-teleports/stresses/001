@@ -1,0 +1,1 @@
+{"id":"aeb41da21105b7250ce62fa11c837aa6","index":1,"scriptPattern":"gen vmode\u003d1 vi\u003d4 smode\u003d2","inputFile":"stdin","outputFile":"stdout","memoryLimit":512,"timeLimit":2000,"totalTimeLimit":15000,"solutionNames":["asafiul_ok.cpp"],"description":"","solutionNamesUid":"","testset":"1","group":"5","ignoreValidators":false}

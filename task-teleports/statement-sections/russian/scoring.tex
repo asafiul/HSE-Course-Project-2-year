@@ -1,0 +1,44 @@
+\begin{center}
+\begingroup
+\unskip
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+& & \multicolumn{4}{c|}{Ограничения} & \\
+\cline{3-6}
+\raisebox{2.25ex}[0cm][0cm]{Подз.}
+& \raisebox{2.25ex}[0cm][0cm]{Баллы}
+& $n$ & $m$ & $t_i, s_i$ & Доп. ограничения 
+& \raisebox{2.25ex}[0cm][0cm]{\parbox{2cm}{\centering Необх. подзадачи}}
+\\
+\hline
+1 & 5 & $n = 2$ & $m \le 50$ & $t_i,s_i \le 100\,000$ & & \\
+\hline
+2 & 7 & $n \le 50$ & $m \le 50$ & $t_i,s_i \le 100\,000$ & & У, 1 \\
+\hline
+3 & 13 & $n \le 1000$ & $m \le 5$ & $t_i,s_i \le 100\,000$ & & У \\
+\hline
+4 & 9 & $n \le 100\,000$ & $m \le 100\,000$ & $t_i,s_i \le 100\,000$ & \parbox[c][1.5cm]{2.5cm}{\centering $s_{i+1} - s_i = s_1$\\ для всех $1 \le i < m$} &  \\
+\hline
+5 & 8 & $n \le 100\,000$ & $m \le 100\,000$ & $t_i,s_i \le 100\,000$ & все $t_i$ равны &  \\
+\hline
+6 & 10 & $n \le 100$ & $m \le 100\,000$ & $t_i,s_i \le 100\,000$ & & У, 1 -- 2  \\
+\hline
+7 & 5 & $n \le 100\,000$  & $m \le 100\,000$ & $t_i \le 2$, $s_i \le 100\,000$ & &  \\
+\hline
+8 & 7 & $n \le 100\,000$ & $m=2$ & $t_i,s_i \le 100\,000$ & & \\
+\hline
+9 & 6 & $n \le 10\,000$ & $m \le 100\,000$ & $t_i,s_i \le 100\,000$ & & У, 1 -- 3, 6  \\
+\hline
+10 & 6 & $n \le 50\,000$ &$m \le 100\,000$ & $t_i,s_i \le 100\,000$ & & У, 1 -- 3, 6, 9  \\
+\hline
+11 & 8 & $n \le 100\,000$ &$m \le 100\,000$ & $t_i,s_i \le 100\,000$ & & У, 1 -- 10  \\
+\hline
+12 & 8 & $n \le 100\,000$ & & & & У, 1 -- 11  \\
+\hline
+13 & 8 & \multicolumn{3}{c|}{без дополнительных ограничений} & & У, 1 -- 12  \\
+\hline
+
+\end{tabular}
+\endgroup
+\end{center}
