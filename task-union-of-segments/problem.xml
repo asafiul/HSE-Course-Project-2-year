@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="17" short-name="tpt-25-min-segments" url="https://polygon.codeforces.com/p6QDjcS/asafiul/tpt-25-min-segments">
+    <names>
+        <name language="russian" value="Объединение отрезков"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="russian" mathjax="true" path="statements/russian/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="russian" mathjax="true" path="statements/.html/russian/problem.html" type="text/html"/>
+        <statement language="russian" path="statements/.pdf/russian/problem.pdf" type="application/pdf"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>2000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>43</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test cmd="gen -n 1 -k 20 -s 13 -maxR 20" method="generated"/>
+                <test cmd="gen -n 2 -k 1 -s 1 -d 2 -maxR 30" method="generated"/>
+                <test cmd="gen -n 2 -k 1000000000 -s 1 -d 2 -maxR 30" method="generated"/>
+                <test cmd="gen -n 2 -k 60 -maxR 100" method="generated"/>
+                <test cmd="gen -n 5 -k 5 -maxR 30 -s 1 -decrease 1" method="generated"/>
+                <test cmd="gen -n 5 -k 5 -d 3 -maxR 25" method="generated"/>
+                <test cmd="gen -n 10 -k 20 -maxR 100" method="generated"/>
+                <test cmd="gen -n 10 -k 1000" method="generated"/>
+                <test cmd="gen -n 10 -k 10000000" method="generated"/>
+                <test cmd="gen -n 100 -k 10000 -maxR 1000000 -s 1" method="generated"/>
+                <test cmd="gen -n 100 -k 1000000000" method="generated"/>
+                <test cmd="gen -n 500 -k 20000" method="generated"/>
+                <test cmd="gen -n 500 -k 100000000 -s 1" method="generated"/>
+                <test cmd="gen -n 5000 -k 20000" method="generated"/>
+                <test cmd="gen -n 5000 -k 100000000 -s 1" method="generated"/>
+                <test cmd="gen -n 5000 -k 100000000 -s 1 -decrease 1" method="generated"/>
+                <test cmd="gen -n 10000 -k 1000000 -maxR 4000000" method="generated"/>
+                <test cmd="gen -n 10000 -k 100000" method="generated"/>
+                <test cmd="gen -n 10000 -k 10000000 -s 1 -decrease 1" method="generated"/>
+                <test cmd="gen -n 50000 -k 100000 -maxR 4000000" method="generated"/>
+                <test cmd="gen -n 50000 -k 10000" method="generated"/>
+                <test cmd="gen -n 50000 -k 10000000 -s 1 -decrease 1" method="generated"/>
+                <test cmd="gen -n 50000 -k 100000000 -s 1" method="generated"/>
+                <test cmd="gen -n 100000 -k 8000 -maxR 500000" method="generated"/>
+                <test cmd="gen -n 100000 -k 10000 -maxR 1000000" method="generated"/>
+                <test cmd="gen -n 100000 -k 10000000" method="generated"/>
+                <test cmd="gen -n 100000 -k 10000000 -s 1" method="generated"/>
+                <test cmd="gen -n 100000 -k 100000000 -s 1 -decrease 1" method="generated"/>
+                <test cmd="gen -n 100000 -k 990000000" method="generated"/>
+                <test cmd="gen -n 200000 -k 1000 -maxR 2000000 -s 2" method="generated"/>
+                <test cmd="gen -n 200000 -k 100000 -maxR 2000000 -s 1" method="generated"/>
+                <test cmd="gen -n 200000 -k 2000000 -maxR 30000000 -decrease 1" method="generated"/>
+                <test cmd="gen -n 200000 -k 2000000 -decrease 1" method="generated"/>
+                <test cmd="gen -n 200000 -k 2000000 -s 1 -decrease 1" method="generated"/>
+                <test cmd="gen -n 200000 -k 20000000" method="generated"/>
+                <test cmd="gen -n 200000 -k 20000000 -s 1 -decrease 1" method="generated"/>
+                <test cmd="gen -n 200000 -k 200000000 -s 1" method="generated"/>
+                <test cmd="gen -n 200000 -k 200000000 -s 10 -d 10" method="generated"/>
+                <test cmd="gen -n 200000 -k 200000000 -decrease 1 -s 1" method="generated"/>
+                <test cmd="gen -n 200000 -k 500000000" method="generated"/>
+                <test cmd="gen -n 200000 -k 990000000 -decrease 1 -s 1" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </executable>
+            <executable>
+                <source path="files/val.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::hcmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/val.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <testset>
+                    <test-count>9</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="valid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/allvik.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/allvik_wrong.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/asafiul_bubble_d.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/asafiul_bubble_s.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/asafiul_n2.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/asafiul_ok.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/asafiul_ok_py.py" type="python.3"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/asafiul_tl_1.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/asafiul_wa_1.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/asafiul_wa_2.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/asafiul_wa_3.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/asafiul_wa_tryhard.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/lordvoldebug_ok.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/volodamlv_ok.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="greedy"/>
+        <tag value="sort"/>
+    </tags>
+</problem>

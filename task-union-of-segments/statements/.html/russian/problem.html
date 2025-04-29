@@ -1,0 +1,30 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META content="no-cache" http-equiv="pragma">
+    <META content="-1" http-equiv="expires">
+    <META content="text/html;charset=UTF-8" http-equiv="content-type">
+    <LINK href="problem-statement.css" rel="stylesheet" type="text/css">
+    <TITLE>Объединение отрезков</TITLE>
+    <SCRIPT type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+        });
+        </SCRIPT>
+        <SCRIPT async="" src="https://polygon.codeforces.com/lib/MathJax/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+    </SCRIPT>
+</HEAD><BODY>
+    <DIV class="problem-statement"><DIV class="header"><DIV class="title">Объединение отрезков</DIV><DIV class="time-limit"><DIV class="property-title">ограничение по времени на тест</DIV>2 секунды</DIV><DIV class="memory-limit"><DIV class="property-title">ограничение по памяти на тест</DIV>256 мегабайт</DIV><DIV class="input-file input-standard"><DIV class="property-title">ввод</DIV>стандартный ввод</DIV><DIV class="output-file output-standard"><DIV class="property-title">вывод</DIV>стандартный вывод</DIV></DIV><DIV class="legend"><P>На числовой прямой расположены $$$n$$$ отрезков, каждый из которых задан парой своими концами $$$[l_i, r_i]$$$ $$$(l_i &lt; r_i)$$$. Отрезки не пересекаются и не имеют общих точек.</P><P>Разрешается не более $$$k$$$ раз выбрать один из отрезков и расширить его на 1 единицу влево или вправо. Если после расширения два отрезка имеют общую точку, то они объединяются в один.</P><P>Необходимо определить минимальное количество отрезков, которые могут остаться после совершения не более $$$k$$$ операций расширения.</P></DIV><P></P><P></P><DIV class="input-specification"><DIV class="section-title">Входные данные</DIV><P></P><P>Первая строка содержит два целых числа $$$n$$$ и $$$k$$$ ($$$1 \leq n \leq 2\cdot 10^5$$$, $$$1 \leq k \leq 10^9$$$)&nbsp;&mdash; количество отрезков и доступных операций расширения.</P><P>Каждая из следующих $$$n$$$ строк содержит пару целых чисел $$$l_i$$$ и $$$r_i$$$ ($$$0 \leq l_i &lt; r_i \leq 10^9$$$)&nbsp;&mdash; концы $$$i$$$-го отрезка. Гарантируется, что для любых $$$i \neq j$$$ выполнено либо $$$r_i &lt; l_j$$$, либо $$$r_j &lt; l_i$$$.</P></DIV><P></P><P></P><DIV class="output-specification"><DIV class="section-title">Выходные данные</DIV><P></P><P>В единственной строке выведите одно целое число&nbsp;&mdash; минимальное количество отрезков, получившихся после операций расширения.</P></DIV><P></P><P></P><DIV class="sample-tests"><DIV class="section-title">Примеры</DIV><P></P><P></P><DIV class="sample-test"><DIV class="input"><DIV class="title">Входные данные</DIV><PRE class="content" data-content="2 3
+4 5
+1 2
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">2 3</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">4 5</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1 2</DIV></PRE></DIV><DIV class="output"><DIV class="title">Выходные данные</DIV><PRE class="content">
+1
+</PRE></DIV><DIV class="input"><DIV class="title">Входные данные</DIV><PRE class="content" data-content="3 2
+1 2
+5 8
+9 10
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">3 2</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1 2</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">5 8</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">9 10</DIV></PRE></DIV><DIV class="output"><DIV class="title">Выходные данные</DIV><PRE class="content">
+2
+</PRE></DIV></DIV></DIV><P></P><P></P><DIV class="note"><DIV class="section-title">Примечание</DIV><P></P><P>В первом примере за 2 операции можно расширить первый отрезок на 2 влево. Тогда отрезки объединятся в один: $$$[1,5]$$$.</P><P>Во втором примере можно расширить второй отрезок вправо на 1. Второй и третий отрезки объединятся в один. Получим 2 отрезка: $$$[1,2]$$$ и $$$[5,10]$$$. Получить один отрезок с помощью единственной оставшейся операции расширения невозможно.</P></DIV></DIV><P></P><P>  </P>
+
+</BODY></HTML>
